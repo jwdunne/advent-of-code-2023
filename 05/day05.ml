@@ -1,13 +1,9 @@
 open Stdio
 open Base
 
-type seeds = int array
-
 type range = int * int
 
 type mapping = {src: range; dest: range}
-
-type map = mapping array
 
 let space_r = Str.regexp " "
 
@@ -81,4 +77,5 @@ let part2 str =
 
 let () =
   let str = In_channel.read_all "input" in
-  printf "%d\n" @@ part1 str
+  printf "%d\n" @@ part1 str;
+  printf "%d\n" @@ part2 str
