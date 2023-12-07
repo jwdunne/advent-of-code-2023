@@ -2,4 +2,3 @@
  (name day02)
  (public_name day02)
  (libraries core str))
- 
