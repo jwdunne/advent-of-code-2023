@@ -1,0 +1,6 @@
+(executable
+ (name day09)
+ (public_name day09)
+ (preprocess
+   (pps ppx_let))
+ (libraries core str))
