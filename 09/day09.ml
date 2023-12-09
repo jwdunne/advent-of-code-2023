@@ -18,10 +18,7 @@ let next nums =
   hist nums |> List.map ~f:List.last_exn |> List.fold ~f:(+) ~init:0 
 
 let prev nums =
-  let rec aux n = function
-    | [] -> n
-    | a :: t -> aux ((List.hd_exn a) - n) t in
-  aux 0 (hist nums)
+  hist nums |> List.map ~f:List.hd_exn |> List.fold ~f:(fun r h -> h - r) ~init:0
 
 let part1 nums = nums |> List.map ~f:next |> List.fold ~f:(+) ~init:0
 
